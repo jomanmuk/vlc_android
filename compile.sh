@@ -1,5 +1,8 @@
 #! /bin/sh
 
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+brew install wget libebml
+
 # Read the Android Wiki http://wiki.videolan.org/AndroidCompile
 # Setup all that stuff correctly.
 # Get the latest Android SDK Platform or modify numbers in configure.sh and vlc-android/default.properties.
