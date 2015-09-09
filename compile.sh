@@ -98,12 +98,12 @@ then
     # 1/ libvlc, libvlccore and its plugins
     TESTED_HASH=57cd36b
     if [ ! -d "vlc" ]; then
-        echo "VLC source not found, cloning"
+        echo "VLC source not found, cloning https://github.com/jomanmuk/vlc-2.2.git"
         git clone https://github.com/jomanmuk/vlc-2.2.git vlc
         cd vlc
-        echo android/ >> .git/info/exclude
-        echo contrib/android/ >> .git/info/exclude
-        git checkout -B android ${TESTED_HASH}
+       # echo android/ >> .git/info/exclude
+       # echo contrib/android/ >> .git/info/exclude
+       # git checkout -B android ${TESTED_HASH}
     else
         echo "VLC source found"
         cd vlc
@@ -116,9 +116,9 @@ then
 Please update your source with something like:
 
 cd vlc
-git reset --hard origin
-git pull origin master
-git checkout -B android ${TESTED_HASH}
+#git reset --hard origin
+#git pull origin master
+#git checkout -B android ${TESTED_HASH}
 
 *** : This will delete any changes you made to the current branch ***
 
