@@ -69,6 +69,9 @@ $(LIBVLCJNI_H):
 $(PRIVATE_LIBDIR)/%.so: $(PRIVATE_LIBDIR)/%.c
 	$(GEN)$(TARGET_TUPLE)-gcc $< -shared -o $@ --sysroot=$(ANDROID_NDK)/platforms/android-9/arch-$(PLATFORM_SHORT_ARCH)
 
+@echo "=== Installing VLC on device =====================@@@@@@@@@@@@@@@@@@@@@@@@@="
+
+
 $(PRIVATE_LIBDIR)/%.c: $(PRIVATE_LIBDIR)/%.symbols
 	$(VERBOSE)rm -f $@
 	$(GEN)for s in `cat $<`; do echo "void $$s() {}" >> $@; done

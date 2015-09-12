@@ -101,8 +101,10 @@ then
     # 1/ libvlc, libvlccore and its plugins
     TESTED_HASH=57cd36b
     if [ ! -d "vlc" ]; then
-        echo "VLC source not found, cloning https://github.com/jomanmuk/vlc-2.2.git"
-        git clone https://github.com/jomanmuk/vlc-2.2.git vlc
+
+        echo "VLC source not found, cloning"
+        git clone https://github.com/jomanmuk/vlc-2.1.git vlc
+
         cd vlc
        # echo android/ >> .git/info/exclude
        # echo contrib/android/ >> .git/info/exclude
